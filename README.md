@@ -1,84 +1,53 @@
-# Multimedia Portfolio
+# Nicolai Askholt — Multimedia Design Portfolio
 
-A single-page, scrollable portfolio built with plain HTML, CSS and JavaScript.
+A single-page portfolio for Nicolai Askholt, a Multimedia Design student based in Copenhagen. The site presents work across UX/UI, digital product development, web design, branding, e-commerce, content design and interactive experiences.
 
-## 1. Replace the text
+## Website overview
 
-Open `index.html` and replace:
+The page is organised as a scrollable portfolio with:
 
-- `YOUR NAME`
-- `Your Name`
-- email address
-- LinkedIn link
-- project descriptions
-- live project URLs (`href="#"`)
+- A hero section with Nicolai's name, location and internship availability.
+- An About section describing his design approach and skills.
+- Six selected projects, each with a description, role, category, visual gallery and link to the live project.
+- A Contact section for internship enquiries, including email and LinkedIn links.
 
-## 2. Add your own project images
+The featured projects are:
 
-Put your images in these folders:
+1. **Dankort Øremærket** — brand redesign, digital campaign and UX/UI.
+2. **A Good Case** — product design and UX/UI.
+3. **Clothing Website** — fashion, e-commerce and web design.
+4. **Højskolendk** — web design, content and digital experience.
+5. **MatchFinder** — UX/UI, app concept and product strategy.
+6. **OS-frisørartikler** — e-commerce, branding and UX/UI.
 
-- `assets/dankort/`
-- `assets/agoodcase/`
-- `assets/clothing/`
-- `assets/hojskolen/`
+## Interactions
 
-The template currently expects:
+- The sticky header links to the About, Work and Contact sections.
+- The thin progress bar at the top follows the visitor's scroll position.
+- Sections marked `.reveal` animate into view as they enter the viewport.
+- Each project gallery can be navigated with previous/next buttons, horizontal scrolling or pointer dragging on desktop.
+- Gallery counters update automatically, and the site respects the user's `prefers-reduced-motion` setting.
+- Project links open the corresponding live project in a new tab.
 
-- `01.jpg`
-- `02.jpg`
-- `03.jpg`
-- `04.jpg`
+## Project structure
 
-You can use PNG or WebP instead. Just change the file paths in `index.html`.
-
-To add more images to a project, duplicate this line inside that project's `.gallery`:
-
-```html
-<figure class="gallery-slide">
-  <img src="assets/dankort/Dankort-1.webp" alt="Dankort project image 1" />
-</figure>
+```text
+index.html       Page content and project data
+styles.css       Layout, responsive styling and animations
+script.js        Scroll effects and gallery interaction
+assets/          Project screenshots and decorative symbols
 ```
 
-The image counter updates automatically.
+The project images are grouped in `assets/` by project: `dankort`, `agoodcase`, `clothing`, `hojskolen`, `matchfinder` and `os`. Decorative transparent PNG symbols are stored in `assets/symbols/`.
 
-## 3. Add floating project logos / symbols
+## Run locally
 
-Put transparent PNG or SVG files in:
-`assets/symbols/`
+No build step or dependencies are required. Open `index.html` directly in a browser, or serve the folder with a local static server. In VS Code, the Live Server extension can be used for a convenient preview.
 
-Then replace the existing placeholder paths in `index.html`.
+## Deployment
 
-Examples:
+Because this is a static HTML, CSS and JavaScript site, it can be deployed to GitHub Pages, Netlify, Vercel or any other static hosting service.
 
-- `assets/symbols/dankort-symbol-1.png`
-- `assets/symbols/dankort-symbol-2.png`
+## Content notes
 
-If you only want one symbol, remove the second `<img class="float-symbol ...">`.
-
-## 4. Live links
-
-Each project has:
-
-```html
-<a class="project-link" href="#" target="_blank" rel="noopener">
-  View live project ↗
-</a>
-```
-
-Replace `#` with your real URL.
-
-## 5. Run locally
-
-Open `index.html` directly in your browser, or use a simple local server.
-
-If using VS Code, the "Live Server" extension is convenient.
-
-## 6. Deploy
-
-This site can be deployed easily to:
-
-- GitHub Pages
-- Netlify
-- Vercel
-
-No build tools are required.
+Project descriptions, gallery image paths and live-project URLs are maintained in `index.html`. The contact email currently uses the placeholder `you@example.com` and should be replaced before publishing.
