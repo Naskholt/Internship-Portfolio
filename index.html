@@ -20,7 +20,43 @@
     <div class="progress" aria-hidden="true"><span></span></div>
 
     <header class="site-header" id="top">
-      <a class="brand" href="#top">Nicolai Askholt</a>
+      <a class="brand" href="#top" aria-label="Nicolai Askholt — back to top">
+        <svg
+          class="brand-mark"
+          viewBox="0 0 44 44"
+          fill="none"
+          aria-hidden="true"
+        >
+          <rect
+            x="2"
+            y="2"
+            width="40"
+            height="40"
+            rx="12"
+            fill="currentColor"
+          />
+          <text
+            x="21.5"
+            y="30"
+            text-anchor="middle"
+            fill="var(--bg)"
+            font-family="Manrope, sans-serif"
+            font-size="22"
+            font-weight="800"
+            letter-spacing="-1.5"
+          >
+            NA
+          </text>
+          <circle
+            cx="38"
+            cy="6"
+            r="5"
+            fill="var(--orange)"
+            stroke="var(--bg)"
+            stroke-width="2"
+          />
+        </svg>
+      </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#work">Work</a>
@@ -112,311 +148,319 @@
         <h2 class="reveal">Four projects from the last year.</h2>
       </section>
 
-      <!-- PROJECT 01 -->
-      <section class="project" data-accent="#e5242a">
-        <img
-          class="float-symbol symbol-a"
-          src="assets/symbols/dankort-symbol-1.png"
-          alt=""
-        />
-        <img
-          class="float-symbol symbol-b"
-          src="assets/symbols/dankort-symbol-2.png"
-          alt=""
-        />
+      <div class="project-binder" aria-label="Project binder">
+        <div
+          class="project-tabs"
+          role="tablist"
+          aria-label="Choose a project"
+          hidden
+        ></div>
+        <!-- PROJECT 01 -->
+        <section class="project" data-accent="#e5242a">
+          <img
+            class="float-symbol symbol-a"
+            src="assets/symbols/dankort-symbol-1.png"
+            alt=""
+          />
+          <img
+            class="float-symbol symbol-b"
+            src="assets/symbols/dankort-symbol-2.png"
+            alt=""
+          />
 
-        <div class="project-sticky">
-          <div class="project-number">01</div>
-          <div>
-            <p class="project-category">
-              Brand Redesign · Digital Campaign · UX/UI
-            </p>
-            <h3>Dankort Øremærket</h3>
-            <p class="project-description">
-              Reimagining Dankort for a younger digital audience through a more
-              modern, engaging and interactive visual experience.
-            </p>
-            <p class="project-role">
-              Role: UX/UI · Visual Design · Campaign Design · Prototyping
-            </p>
-            <a
-              class="project-link"
-              href="https://dankort-2semester-eksamen.netlify.app/"
-              target="_blank"
-              rel="noopener"
-              >View live project ↗</a
-            >
+          <div class="project-sticky">
+            <div class="project-number">01</div>
+            <div>
+              <p class="project-category">
+                Brand Redesign · Digital Campaign · UX/UI
+              </p>
+              <h3>Dankort Øremærket</h3>
+              <p class="project-description">
+                Reimagining Dankort for a younger digital audience through a
+                more modern, engaging and interactive visual experience.
+              </p>
+              <p class="project-role">
+                Role: UX/UI · Visual Design · Campaign Design · Prototyping
+              </p>
+              <a
+                class="project-link"
+                href="https://dankort-2semester-eksamen.netlify.app/"
+                target="_blank"
+                rel="noopener"
+                >View live project ↗</a
+              >
+            </div>
           </div>
-        </div>
 
-        <div class="gallery-wrap">
-          <div class="gallery" data-gallery>
-            <figure class="gallery-slide">
-              <img
-                src="assets/dankort/Dankort-1.webp"
-                alt="Dankort project image 1"
-              />
-            </figure>
-            <figure class="gallery-slide">
-              <img
-                src="assets/dankort/Dankort-2.webp"
-                alt="Dankort project image 2"
-              />
-            </figure>
-            <figure class="gallery-slide">
-              <img
-                src="assets/dankort/Dankort-3.webp"
-                alt="Dankort project image 3"
-              />
-            </figure>
-            <figure class="gallery-slide">
-              <img
-                src="assets/dankort/Dankort-4.webp"
-                alt="Dankort project image 4"
-              />
-            </figure>
+          <div class="gallery-wrap">
+            <div class="gallery" data-gallery>
+              <figure class="gallery-slide">
+                <img
+                  src="assets/dankort/Dankort-1.webp"
+                  alt="Dankort project image 1"
+                />
+              </figure>
+              <figure class="gallery-slide">
+                <img
+                  src="assets/dankort/Dankort-2.webp"
+                  alt="Dankort project image 2"
+                />
+              </figure>
+              <figure class="gallery-slide">
+                <img
+                  src="assets/dankort/Dankort-3.webp"
+                  alt="Dankort project image 3"
+                />
+              </figure>
+              <figure class="gallery-slide">
+                <img
+                  src="assets/dankort/Dankort-4.webp"
+                  alt="Dankort project image 4"
+                />
+              </figure>
+            </div>
+            <div class="gallery-controls">
+              <button type="button" data-prev aria-label="Previous image">
+                ←
+              </button>
+              <span data-counter>01 / 04</span>
+              <button type="button" data-next aria-label="Next image">→</button>
+            </div>
           </div>
-          <div class="gallery-controls">
-            <button type="button" data-prev aria-label="Previous image">
-              ←
-            </button>
-            <span data-counter>01 / 04</span>
-            <button type="button" data-next aria-label="Next image">→</button>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- PROJECT 02 -->
-      <section class="project" data-accent="#5476ff">
-        <img
-          class="float-symbol symbol-a"
-          src="assets/symbols/agoodcase-symbol-1.png"
-          alt=""
-        />
-        <img
-          class="float-symbol symbol-b"
-          src="assets/symbols/agoodcase-symbol-2.png"
-          alt=""
-        />
+        <!-- PROJECT 02 -->
+        <section class="project" data-accent="#5476ff">
+          <img
+            class="float-symbol symbol-a"
+            src="assets/symbols/agoodcase-symbol-1.png"
+            alt=""
+          />
+          <img
+            class="float-symbol symbol-b"
+            src="assets/symbols/agoodcase-symbol-2.png"
+            alt=""
+          />
 
-        <div class="project-sticky">
-          <div class="project-number">02</div>
-          <div>
-            <p class="project-category">Product Design · UX/UI</p>
-            <h3>A Good Case</h3>
-            <p class="project-description">
-              A digital product project focused on building a clear, intuitive
-              and visually refined experience around a strong user need.
-            </p>
-            <p class="project-role">
-              Role: Research · UX/UI · Prototyping · Visual Design
-            </p>
-            <a
-              class="project-link"
-              href="https://a-good-case.netlify.app/"
-              target="_blank"
-              rel="noopener"
-              >View live project ↗</a
-            >
+          <div class="project-sticky">
+            <div class="project-number">02</div>
+            <div>
+              <p class="project-category">Product Design · UX/UI</p>
+              <h3>A Good Case</h3>
+              <p class="project-description">
+                A digital product project focused on building a clear, intuitive
+                and visually refined experience around a strong user need.
+              </p>
+              <p class="project-role">
+                Role: Research · UX/UI · Prototyping · Visual Design
+              </p>
+              <a
+                class="project-link"
+                href="https://a-good-case.netlify.app/"
+                target="_blank"
+                rel="noopener"
+                >View live project ↗</a
+              >
+            </div>
           </div>
-        </div>
 
-        <div class="gallery-wrap">
-          <div class="gallery" data-gallery>
-            <figure class="gallery-slide">
-              <img
-                src="assets/agoodcase/Good-Case-1.webp"
-                alt="A Good Case project image 1"
-              />
-            </figure>
-            <figure class="gallery-slide">
-              <img
-                src="assets/agoodcase/Good-Case-2.webp"
-                alt="A Good Case project image 2"
-              />
-            </figure>
-            <figure class="gallery-slide">
-              <img
-                src="assets/agoodcase/Good-Case-3.webp"
-                alt="A Good Case project image 3"
-              />
-            </figure>
-            <figure class="gallery-slide">
-              <img
-                src="assets/agoodcase/Good-Case-4.webp"
-                alt="A Good Case project image 4"
-              />
-            </figure>
+          <div class="gallery-wrap">
+            <div class="gallery" data-gallery>
+              <figure class="gallery-slide">
+                <img
+                  src="assets/agoodcase/Good-Case-1.webp"
+                  alt="A Good Case project image 1"
+                />
+              </figure>
+              <figure class="gallery-slide">
+                <img
+                  src="assets/agoodcase/Good-Case-2.webp"
+                  alt="A Good Case project image 2"
+                />
+              </figure>
+              <figure class="gallery-slide">
+                <img
+                  src="assets/agoodcase/Good-Case-3.webp"
+                  alt="A Good Case project image 3"
+                />
+              </figure>
+              <figure class="gallery-slide">
+                <img
+                  src="assets/agoodcase/Good-Case-4.webp"
+                  alt="A Good Case project image 4"
+                />
+              </figure>
+            </div>
+            <div class="gallery-controls">
+              <button type="button" data-prev aria-label="Previous image">
+                ←
+              </button>
+              <span data-counter>01 / 04</span>
+              <button type="button" data-next aria-label="Next image">→</button>
+            </div>
           </div>
-          <div class="gallery-controls">
-            <button type="button" data-prev aria-label="Previous image">
-              ←
-            </button>
-            <span data-counter>01 / 04</span>
-            <button type="button" data-next aria-label="Next image">→</button>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- PROJECT 04 -->
-      <section class="project" data-accent="#ff7a2f">
-        <img
-          class="float-symbol symbol-a"
-          src="assets/symbols/hojskolen-symbol-1.png"
-          alt=""
-        />
-        <img
-          class="float-symbol symbol-b"
-          src="assets/symbols/hojskolen-symbol-2.png"
-          alt=""
-        />
+        <!-- PROJECT 04 -->
+        <section class="project" data-accent="#ff7a2f">
+          <img
+            class="float-symbol symbol-a"
+            src="assets/symbols/hojskolen-symbol-1.png"
+            alt=""
+          />
+          <img
+            class="float-symbol symbol-b"
+            src="assets/symbols/hojskolen-symbol-2.png"
+            alt=""
+          />
 
-        <div class="project-sticky">
-          <div class="project-number">03</div>
-          <div>
-            <p class="project-category">
-              Web Design · Content · Digital Experience
-            </p>
-            <h3>Højskolendk</h3>
-            <p class="project-description">
-              A youthful and engaging digital concept built around discovery,
-              community and making information easier to explore.
-            </p>
-            <p class="project-role">
-              Role: UX/UI · Content Design · Web Design · Prototyping
-            </p>
-            <a
-              class="project-link"
-              href="https://hojskolendk-8.netlify.app/"
-              target="_blank"
-              rel="noopener"
-              >View live project ↗</a
-            >
+          <div class="project-sticky">
+            <div class="project-number">03</div>
+            <div>
+              <p class="project-category">
+                Web Design · Content · Digital Experience
+              </p>
+              <h3>Højskolendk</h3>
+              <p class="project-description">
+                A youthful and engaging digital concept built around discovery,
+                community and making information easier to explore.
+              </p>
+              <p class="project-role">
+                Role: UX/UI · Content Design · Web Design · Prototyping
+              </p>
+              <a
+                class="project-link"
+                href="https://hojskolendk-8.netlify.app/"
+                target="_blank"
+                rel="noopener"
+                >View live project ↗</a
+              >
+            </div>
           </div>
-        </div>
 
-        <div class="gallery-wrap">
-          <div class="gallery" data-gallery>
-            <figure class="gallery-slide">
-              <img
-                src="assets/hojskolen/Hojskolendk-1.webp"
-                alt="Højskolendk project image 1"
-              />
-            </figure>
-            <figure class="gallery-slide">
-              <img
-                src="assets/hojskolen/Hojskolendk-2.webp"
-                alt="Højskolendk project image 2"
-              />
-            </figure>
-            <figure class="gallery-slide">
-              <img
-                src="assets/hojskolen/Hojskolendk-3.webp"
-                alt="Højskolendk project image 3"
-              />
-            </figure>
-            <figure class="gallery-slide">
-              <img
-                src="assets/hojskolen/Hojskolendk-4.webp"
-                alt="Højskolendk project image 4"
-              />
-            </figure>
+          <div class="gallery-wrap">
+            <div class="gallery" data-gallery>
+              <figure class="gallery-slide">
+                <img
+                  src="assets/hojskolen/Hojskolendk-1.webp"
+                  alt="Højskolendk project image 1"
+                />
+              </figure>
+              <figure class="gallery-slide">
+                <img
+                  src="assets/hojskolen/Hojskolendk-2.webp"
+                  alt="Højskolendk project image 2"
+                />
+              </figure>
+              <figure class="gallery-slide">
+                <img
+                  src="assets/hojskolen/Hojskolendk-3.webp"
+                  alt="Højskolendk project image 3"
+                />
+              </figure>
+              <figure class="gallery-slide">
+                <img
+                  src="assets/hojskolen/Hojskolendk-4.webp"
+                  alt="Højskolendk project image 4"
+                />
+              </figure>
+            </div>
+            <div class="gallery-controls">
+              <button type="button" data-prev aria-label="Previous image">
+                ←
+              </button>
+              <span data-counter>01 / 04</span>
+              <button type="button" data-next aria-label="Next image">→</button>
+            </div>
           </div>
-          <div class="gallery-controls">
-            <button type="button" data-prev aria-label="Previous image">
-              ←
-            </button>
-            <span data-counter>01 / 04</span>
-            <button type="button" data-next aria-label="Next image">→</button>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="project" data-accent="#1e63ff">
-        <img
-          class="float-symbol symbol-a"
-          src="assets/symbols/agoodcase-symbol-1.png"
-          alt=""
-        />
-        <img
-          class="float-symbol symbol-b"
-          src="assets/symbols/agoodcase-symbol-2.png"
-          alt=""
-        />
+        <section class="project" data-accent="#1e63ff">
+          <img
+            class="float-symbol symbol-a"
+            src="assets/symbols/agoodcase-symbol-1.png"
+            alt=""
+          />
+          <img
+            class="float-symbol symbol-b"
+            src="assets/symbols/agoodcase-symbol-2.png"
+            alt=""
+          />
 
-        <div class="project-sticky">
-          <div class="project-number">04</div>
-          <div>
-            <p class="project-category">
-              UX/UI · App Concept · Product Strategy
-            </p>
-            <h3>MatchFinder</h3>
-            <p class="project-description">
-              A matchmaking concept designed to make finding the right people,
-              connections and opportunities feel simpler, more human and more
-              intentional.
-            </p>
-            <p class="project-role">
-              Role: UX/UI · Research · Prototyping · Interaction Design
-            </p>
-            <a
-              class="project-link"
-              href="https://naskholt.github.io/Emnesite/"
-              target="_blank"
-              rel="noopener"
-              >View live project ↗</a
-            >
+          <div class="project-sticky">
+            <div class="project-number">04</div>
+            <div>
+              <p class="project-category">
+                UX/UI · App Concept · Product Strategy
+              </p>
+              <h3>MatchFinder</h3>
+              <p class="project-description">
+                A matchmaking concept designed to make finding the right people,
+                connections and opportunities feel simpler, more human and more
+                intentional.
+              </p>
+              <p class="project-role">
+                Role: UX/UI · Research · Prototyping · Interaction Design
+              </p>
+              <a
+                class="project-link"
+                href="https://naskholt.github.io/Emnesite/"
+                target="_blank"
+                rel="noopener"
+                >View live project ↗</a
+              >
+            </div>
           </div>
-        </div>
 
-        <div class="gallery-wrap">
-          <div class="gallery" data-gallery>
-            <figure class="gallery-slide matchfinder-placeholder">
-              <img
-                src="assets/matchfinder/matchfinder-1.webp"
-                alt="Matchfinder project image 1"
-              />
-            </figure>
-            <figure class="gallery-slide matchfinder-placeholder">
-              <img
-                src="assets/matchfinder/matchfinder-2.webp"
-                alt="Matchfinder project image 2"
-              />
-            </figure>
-            <figure class="gallery-slide matchfinder-placeholder">
-              <img
-                src="assets/matchfinder/matchfinder-3.webp"
-                alt="Matchfinder project image 3"
-              />
-            </figure>
-            <figure class="gallery-slide matchfinder-placeholder">
-              <img
-                src="assets/matchfinder/matchfinder-4.webp"
-                alt="Matchfinder project image 4"
-              />
-            </figure>
-            <figure class="gallery-slide matchfinder-placeholder">
-              <img
-                src="assets/matchfinder/matchfinder-5.webp"
-                alt="Matchfinder project image 5"
-              />
-            </figure>
-            <figure class="gallery-slide matchfinder-placeholder">
-              <img
-                src="assets/matchfinder/matchfinder-6.webp"
-                alt="Matchfinder project image 6"
-              />
-            </figure>
+          <div class="gallery-wrap">
+            <div class="gallery" data-gallery>
+              <figure class="gallery-slide matchfinder-placeholder">
+                <img
+                  src="assets/matchfinder/matchfinder-1.webp"
+                  alt="Matchfinder project image 1"
+                />
+              </figure>
+              <figure class="gallery-slide matchfinder-placeholder">
+                <img
+                  src="assets/matchfinder/matchfinder-2.webp"
+                  alt="Matchfinder project image 2"
+                />
+              </figure>
+              <figure class="gallery-slide matchfinder-placeholder">
+                <img
+                  src="assets/matchfinder/matchfinder-3.webp"
+                  alt="Matchfinder project image 3"
+                />
+              </figure>
+              <figure class="gallery-slide matchfinder-placeholder">
+                <img
+                  src="assets/matchfinder/matchfinder-4.webp"
+                  alt="Matchfinder project image 4"
+                />
+              </figure>
+              <figure class="gallery-slide matchfinder-placeholder">
+                <img
+                  src="assets/matchfinder/matchfinder-5.webp"
+                  alt="Matchfinder project image 5"
+                />
+              </figure>
+              <figure class="gallery-slide matchfinder-placeholder">
+                <img
+                  src="assets/matchfinder/matchfinder-6.webp"
+                  alt="Matchfinder project image 6"
+                />
+              </figure>
+            </div>
+            <div class="gallery-controls">
+              <button type="button" data-prev aria-label="Previous image">
+                ←
+              </button>
+              <span data-counter>01 / 06</span>
+              <button type="button" data-next aria-label="Next image">→</button>
+            </div>
           </div>
-          <div class="gallery-controls">
-            <button type="button" data-prev aria-label="Previous image">
-              ←
-            </button>
-            <span data-counter>01 / 06</span>
-            <button type="button" data-next aria-label="Next image">→</button>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <section class="contact section" id="contact">
         <p class="section-kicker">Contact</p>
@@ -426,7 +470,12 @@
           and grow as a digital designer.
         </p>
         <div class="contact-links reveal">
-          <a href="mailto:you@example.com">Get in touch ↗</a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=Nicolai.askholt%40gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Get in touch ↗</a
+          >
           <a
             href="https://www.linkedin.com/in/nicolai-askholt/"
             target="_blank"

@@ -20,6 +20,61 @@ document
 
 const progressBar = document.querySelector(".progress span");
 
+const binder = document.querySelector(".project-binder");
+if (binder) {
+  const tablist = binder.querySelector(".project-tabs");
+  const panels = [...binder.querySelectorAll(".project")];
+  const tabs = panels.map((panel, index) => {
+    const tab = document.createElement("button");
+    tab.type = "button";
+    tab.id = `project-tab-${index}`;
+    tab.className = "project-tab";
+    tab.textContent = panel.querySelector("h3").textContent;
+    tab.setAttribute("role", "tab");
+    tab.style.setProperty("--tab-accent", panel.dataset.accent);
+    panel.id = `project-panel-${index}`;
+    panel.setAttribute("role", "tabpanel");
+    panel.setAttribute("aria-labelledby", tab.id);
+    panel.tabIndex = 0;
+    tab.setAttribute("aria-controls", panel.id);
+    tablist.append(tab);
+    return tab;
+  });
+
+  const selectProject = (selected, focus = false) => {
+    tabs.forEach((tab, index) => {
+      const active = index === selected;
+      tab.setAttribute("aria-selected", String(active));
+      tab.tabIndex = active ? 0 : -1;
+      panels[index].hidden = !active;
+    });
+    if (focus) tabs[selected].focus({ preventScroll: true });
+    tabs[selected].scrollIntoView({ block: "nearest", inline: "nearest", behavior: "instant" });
+    onScroll();
+  };
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => selectProject(index));
+    tab.addEventListener("keydown", (event) => {
+      let next = index;
+      if (event.key === "ArrowRight") next = (index + 1) % tabs.length;
+      else if (event.key === "ArrowLeft") next = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === "Home") next = 0;
+      else if (event.key === "End") next = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      selectProject(next, true);
+    });
+  });
+  tablist.hidden = false;
+  // Initialize without scrolling away from the top of the page.
+  tabs.forEach((tab, index) => {
+    tab.setAttribute("aria-selected", String(index === 0));
+    tab.tabIndex = index === 0 ? 0 : -1;
+    panels[index].hidden = index !== 0;
+  });
+}
+
 function onScroll() {
   const scrollable = document.documentElement.scrollHeight - window.innerHeight;
   const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
