@@ -8,17 +8,15 @@ The page is organised as a scrollable portfolio with:
 
 - A hero section with Nicolai's name, location and internship availability.
 - An About section describing his design approach and skills.
-- Six selected projects, each with a description, role, category, visual gallery and link to the live project.
+- Four selected projects, each with a description, role, category, visual gallery and link to the live project.
 - A Contact section for internship enquiries, including email and LinkedIn links.
 
 The featured projects are:
 
 1. **Dankort Øremærket** — brand redesign, digital campaign and UX/UI.
 2. **A Good Case** — product design and UX/UI.
-3. **Clothing Website** — fashion, e-commerce and web design.
-4. **Højskolendk** — web design, content and digital experience.
-5. **MatchFinder** — UX/UI, app concept and product strategy.
-6. **OS-frisørartikler** — e-commerce, branding and UX/UI.
+3. **Højskolendk** — web design, content and digital experience.
+4. **MatchFinder** — UX/UI, app concept and product strategy.
 
 ## Interactions
 
@@ -38,7 +36,7 @@ script.js        Scroll effects and gallery interaction
 assets/          Project screenshots and decorative symbols
 ```
 
-The project images are grouped in `assets/` by project: `dankort`, `agoodcase`, `clothing`, `hojskolen`, `matchfinder` and `os`. Decorative transparent PNG symbols are stored in `assets/symbols/`.
+The featured project images are grouped in `assets/` by project: `dankort`, `agoodcase`, `hojskolen` and `matchfinder`. Decorative transparent PNG symbols are stored in `assets/symbols/`.
 
 ## Run locally
 
