@@ -20,47 +20,28 @@
     <div class="progress" aria-hidden="true"><span></span></div>
 
     <header class="site-header" id="top">
-      <a class="brand" href="#top" aria-label="Nicolai Askholt — back to top">
-        <svg
-          class="brand-mark"
-          viewBox="0 0 44 44"
-          fill="none"
+      <a
+        class="header-contact rive-host"
+        href="#contact"
+        aria-label="Contact Nicolai"
+      >
+        <span class="rive-fallback">Contact ↗</span>
+        <canvas
+          data-rive="assets/rive/contact-button.riv"
           aria-hidden="true"
-        >
-          <rect
-            x="2"
-            y="2"
-            width="40"
-            height="40"
-            rx="12"
-            fill="currentColor"
-          />
-          <text
-            x="21.5"
-            y="30"
-            text-anchor="middle"
-            fill="var(--bg)"
-            font-family="Manrope, sans-serif"
-            font-size="22"
-            font-weight="800"
-            letter-spacing="-1.5"
-          >
-            NA
-          </text>
-          <circle
-            cx="38"
-            cy="6"
-            r="5"
-            fill="var(--orange)"
-            stroke="var(--bg)"
-            stroke-width="2"
-          />
-        </svg>
+        ></canvas>
+      </a>
+      <a
+        class="brand rive-host"
+        href="#top"
+        aria-label="Nicolai Askholt — back to top"
+      >
+        <span class="rive-fallback">NA</span>
+        <canvas data-rive="assets/rive/avatar.riv" aria-hidden="true"></canvas>
       </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
       </nav>
     </header>
 
@@ -140,6 +121,25 @@
               <span>Illustrator</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="play-break" aria-labelledby="play-heading">
+        <div class="play-copy reveal">
+          <p class="section-kicker">A little room for play</p>
+          <h2 id="play-heading">Go on.<br /><span>Push my buttons.</span></h2>
+          <p class="play-hint">Give these a try while you scroll.</p>
+        </div>
+        <div
+          class="rive-boxes rive-host"
+          role="group"
+          aria-label="Interactive animated boxes"
+        >
+          <canvas
+            data-rive="assets/rive/boxes.riv"
+            role="img"
+            aria-label="Three animated boxes that respond to your pointer"
+          ></canvas>
         </div>
       </section>
 
@@ -490,6 +490,8 @@
       </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="assets/vendor/rive/rive.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="rive-elements.js" defer></script>
   </body>
 </html>
