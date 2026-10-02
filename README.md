@@ -40,7 +40,7 @@ The featured project images are grouped in `assets/` by project: `dankort`, `ago
 
 ## Run locally
 
-No build step or dependencies are required. Open `index.html` directly in a browser, or serve the folder with a local static server. In VS Code, the Live Server extension can be used for a convenient preview.
+No build step is required. Serve the folder with VS Code Live Server or `python3 -m http.server 8000`, then open the localhost URL. The Rive animations load binary files and require HTTP rather than opening `index.html` directly.
 
 ## Deployment
 
@@ -49,3 +49,9 @@ Because this is a static HTML, CSS and JavaScript site, it can be deployed to Gi
 ## Content notes
 
 Project descriptions, gallery image paths and live-project URLs are maintained in `index.html`. The contact email currently uses the placeholder `you@example.com` and should be replaced before publishing.
+
+## Rive elements
+
+The centered header avatar, top-left contact link, and boxes between About and Selected Work use the files in `assets/rive/`. `rive-elements.js` activates each default artboard’s first state machine, preserving its authored pointer interactions. The contact link scrolls to the Contact section. Animations pause offscreen, in background tabs, and when reduced motion is requested.
+
+Rive Canvas runtime 2.44.0 is bundled in `assets/vendor/rive/` (JavaScript and WebAssembly). Runtime source and licensing: https://github.com/rive-app/rive-wasm.
