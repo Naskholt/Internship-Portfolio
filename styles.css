@@ -168,36 +168,6 @@ section[id] {
   overflow: hidden;
 }
 
-.hero-shape {
-  position: absolute;
-
-  border-radius: 50%;
-
-  pointer-events: none;
-
-  z-index: -1;
-}
-
-.hero-shape-orange {
-  width: clamp(180px, 25vw, 430px);
-  height: clamp(180px, 25vw, 430px);
-
-  background: var(--orange);
-
-  right: -8%;
-  top: 12%;
-}
-
-.hero-shape-blue {
-  width: clamp(100px, 13vw, 230px);
-  height: clamp(100px, 13vw, 230px);
-
-  background: var(--blue);
-
-  left: 8%;
-  bottom: 5%;
-}
-
 .hero-bottom {
   margin-top: clamp(50px, 8vw, 120px);
 
@@ -421,7 +391,13 @@ h3 {
   align-self: end;
   max-width: 680px;
 }
-.about-copy > p,
+.about-copy > p {
+  font-size: clamp(16px, 1.5vw, 22px);
+  line-height: 1.6;
+}
+.about-copy > p + p {
+  margin-top: 20px;
+}
 .contact-copy {
   font-size: clamp(18px, 2vw, 28px);
   line-height: 1.45;
