@@ -109,42 +109,6 @@ button {
 .site-header .nav {
   justify-self: end;
 }
-.play-break {
-  width: min(100%, var(--max));
-  margin: 0 auto;
-  padding: 32px var(--side) clamp(64px, 7vw, 112px);
-  display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr);
-  align-items: center;
-  gap: clamp(24px, 4vw, 64px);
-}
-.play-copy h2 {
-  margin-top: 24px;
-  font-size: clamp(42px, 5vw, 80px);
-  line-height: 1.02;
-}
-.play-copy h2 span {
-  color: #b94716;
-}
-.play-hint {
-  max-width: 30ch;
-  margin: 24px 0 0;
-  font-size: 17px;
-  line-height: 1.6;
-}
-.rive-boxes {
-  width: 100%;
-  min-width: 0;
-  height: clamp(240px, 42vw, 420px);
-  margin: 0 auto;
-}
-@media (max-width: 760px) {
-  .play-break {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .play-copy h2 { font-size: clamp(42px, 9vw, 68px); }
-}
 section[id] {
   scroll-margin-top: calc(var(--header-h) + 16px);
 }
