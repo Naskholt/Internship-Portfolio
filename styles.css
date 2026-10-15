@@ -547,6 +547,13 @@ h3 {
   font-weight: 700;
 }
 
+.project-link-toki-presentation {
+  background: #faff45;
+  color: #373b30;
+  padding: 12px 20px;
+  border-radius: 999px;
+}
+
 .project::before {
   content: "";
 
